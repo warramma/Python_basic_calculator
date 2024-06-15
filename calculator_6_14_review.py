@@ -7,19 +7,7 @@
 # ....how would i do that in C++?   
 
 
-
-
-
-print('You have opened the calculator...')
-print('You have six options:')
-print('+    -   x   /   ^   %')
-sentinel = 'Y'
-#result = 0
-
-while (sentinel.lower()=='y'):
-    num1 = float(input('Enter a number: '))
-    op = input('operator: ')
-    num2 = float(input('Next number: '))
+def calculator (num1, op, num2):
     if(op=='+'):
         #sum
         print(num1 + num2)
@@ -41,6 +29,18 @@ while (sentinel.lower()=='y'):
     elif(op == '%'):
         #modulo
         print(num1 % num2)
+
+print('You have opened the calculator...')
+print('You have six options:')
+print('+    -   x   /   ^   %')
+sentinel = 'Y'
+#result = 0
+
+while (sentinel.lower()=='y'):
+    num1 = float(input('Enter a number: '))
+    op = input('operator: ')
+    num2 = float(input('Next number: '))
+    calculator(num1, op, num2)
     sentinel = input('enter N to stop, Y to continue: ')
 
 print('have a nice day :)')
